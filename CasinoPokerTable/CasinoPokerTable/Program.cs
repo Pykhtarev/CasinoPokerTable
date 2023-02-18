@@ -10,9 +10,12 @@ if (!table.IsEquilibriumAble)
 {
     Console.WriteLine("Wrong number of chips, can't equilibrium the table");
 }
+else
+{
+    table.MinEquilibriumMovesCalc();
+    Console.WriteLine($"Min flip {table.MinEquilibriumMoves}");
 
-table.MinEquilibriumMovesCalc();
-Console.WriteLine($"Min flip {table.MinEquilibriumMoves}");
+}
 
 
 

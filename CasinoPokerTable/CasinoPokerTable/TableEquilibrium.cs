@@ -32,7 +32,8 @@ namespace CasinoPokerTable
 
         void CheckEquilibriumAble()
         {
-            IsEquilibriumAble = _chipsSet.Average() % 1 == 0;
+            IsEquilibriumAble = _chipsSet.Average() % 1 == 0&& _chipsSet.Min()>=0;
+            
         }
 
       public  void MinEquilibriumMovesCalc()
