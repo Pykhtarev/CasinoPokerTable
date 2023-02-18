@@ -92,7 +92,7 @@ namespace CasinoPokerTable
                    
                 }
 
-                if (chipsRight != 0 && chipsRight > chipsLeft)
+                if (chipsRight != 0 && chipsLeft==0)
                 {
                     _chipsSet[current] -= chipsRight;
                     _chipsSet[rightIter] += chipsRight;
@@ -100,7 +100,7 @@ namespace CasinoPokerTable
                     continue;
                 }
 
-                if (chipsLeft!= 0 &&  chipsLeft >= chipsRight)
+                if (chipsLeft!= 0)
                 {
                     _chipsSet[current] -= chipsLeft;
                     _chipsSet[leftIter] += chipsLeft;
