@@ -38,7 +38,10 @@ namespace CasinoPokerTable
 
       public  void MinEquilibriumMovesCalc()
       {
-            int current = 0;
+          if (IsEquilibriumAble)
+          {
+
+                int current = 0;
             int leftIter = current - 1;
             int rightIter = current + 1;
             int distance = 1;
@@ -111,8 +114,8 @@ namespace CasinoPokerTable
                 distance++;
                 rightIter++;
                 leftIter--;
-
             }
+          }
 
         }
 
