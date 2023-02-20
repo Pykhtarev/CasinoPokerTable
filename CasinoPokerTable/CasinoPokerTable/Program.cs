@@ -3,7 +3,7 @@
 using System.Data;
 using CasinoPokerTable;
 
-int[] arr = { 3, 5, 9, 10, 3 };
+int[] arr = { 6, 2, 4, 10, 3 };
 var table = new TableEquilibrium(arr);
 
 if (!table.IsEquilibriumAble)
