@@ -66,7 +66,7 @@ namespace CasinoPokerTable
                         _chipsSet[indexOfMax] -= needToMove;
                         _chipsSet[indexOfMin] += needToMove;
 
-                        var distLeft = Math.Max(rightIter, current) - Math.Min(rightIter, current);
+                        var distLeft = Math.Max(rightIter, current) - Math.Min(current, rightIter);
                         var distRight = _chipsSet.Length - Math.Max(rightIter, current) + Math.Min(current, rightIter);
                         MinEquilibriumMoves += Math.Min(distLeft, distRight) * needToMove;
                     }
@@ -79,6 +79,10 @@ namespace CasinoPokerTable
                     if (current + shift > _chipsSet.Length-1)
                     {
                         current = 0;
+                        if (shift>_chipsSet.Length)
+                        {
+                            shift = 0;
+                        }
                         ++shift;
                     }
                     else
